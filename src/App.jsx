@@ -1,7 +1,17 @@
 import { useState } from "react";
 
 const Statistics = ({ good, neutral, bad }) => {
-  const all = good + neutral + bad; 
+  const all = good + neutral + bad;
+
+  if (all === 0) {
+    return (
+      <div>
+        <h1>Statistics</h1>
+
+        <p>No feedback</p>
+      </div>
+    );
+  }
   const ave = all === 0 ? 0 : (good * 1 + neutral * -1) / all;
   const positive = all == 0 ? 0 : (good / all) * 100;
 
