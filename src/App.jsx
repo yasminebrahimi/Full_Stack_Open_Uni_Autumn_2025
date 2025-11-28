@@ -29,14 +29,16 @@ const App = () => {
       {all == 0 ? (
         <p> Mo Feedback</p>
       ) : (
-        <div>
-          <Statistic text="good" value={good} />
-          <Statistic text="neutral" value={neutral} />
-          <Statistic text="bad" value={bad} />
-          <Statistic text="all" value={all} />
-          <Statistic text="ave" value={ave} />
-          <Statistic text="positive" value={positive} />
-        </div>
+        <table>
+          <tbody>
+            <Statistic text="good" value={good} />
+            <Statistic text="neutral" value={neutral} />
+            <Statistic text="bad" value={bad} />
+            <Statistic text="all" value={all} />
+            <Statistic text="ave" value={ave} />
+            <Statistic text="positive" value={positive} />
+          </tbody>
+        </table>
       )}
     </div>
   );
