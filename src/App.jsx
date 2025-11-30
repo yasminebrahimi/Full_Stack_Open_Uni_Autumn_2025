@@ -11,6 +11,14 @@ const App = () => {
   const addName = (event) => {
     event.preventDefault();
 
+    //avoid dublicates
+    const existedName = persons.some((person) => person.name === newName);
+
+    if (existedName) {
+      alert(`${newName} is already existed.`);
+      return;
+    }
+
     const personObject = {
       name: newName,
     };
