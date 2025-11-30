@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Statistic from "./components/Statistic";
+import Statistic from "./components/StatisticUnicafe";
 
+//Unicode
 const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
